@@ -16,17 +16,18 @@ type TeamDetailsStackProp = StackNavigationProp<
 interface TeamCardListProps {
   data: TeamItem[];
   leagueId: number;
+  seasonYear: number;
 }
 
 export const TeamCardList: React.FC<TeamCardListProps> = memo(
-  ({data, leagueId}) => {
+  ({data, leagueId, seasonYear}) => {
     const {navigate} = useNavigation<TeamDetailsStackProp>();
 
     const renderItem = ({item}: ListRenderItemInfo<TeamItem>) => {
       const onTeamCardPress = () => {
         navigate({
           name: LeaguesAndTeamsRoutes.TeamDetails,
-          params: {teamId: item.team.id, leagueId},
+          params: {teamId: item.team.id, leagueId, seasonYear},
         });
       };
 

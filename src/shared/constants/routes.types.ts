@@ -8,6 +8,7 @@ export enum LeaguesAndTeamsRoutes {
   LeagueDetails = 'LeagueDetails',
   TeamList = 'TeamList',
   TeamDetails = 'TeamDetails',
+  TeamStatistics = 'TeamStatistics',
 }
 
 // export enum LeaguesAndTeamsRoutes {

@@ -9,5 +9,14 @@ export type LeaguesAndTeamsParamList = {
     seasonYear: number;
     leagueName: string;
   };
-  [LeaguesAndTeamsRoutes.TeamDetails]: {teamId: number; leagueId: number};
+  [LeaguesAndTeamsRoutes.TeamDetails]: {
+    teamId: number;
+    leagueId: number;
+    seasonYear: number;
+  };
+  [LeaguesAndTeamsRoutes.TeamStatistics]: {
+    leagueId: number;
+    teamId: number;
+    seasonYear: number;
+  };
 };

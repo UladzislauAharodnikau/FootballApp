@@ -11,6 +11,7 @@ import LeaguesList from 'modules/leaguesAndTeams/screens/leaguesList/leaguesList
 import LeagueDetails from 'modules/leaguesAndTeams/screens/leagueDetails/leagueDetails.component';
 import TeamList from 'modules/leaguesAndTeams/screens/teamList/teamList.component';
 import TeamDetails from 'modules/leaguesAndTeams/screens/teamDetails/teamDetails.component';
+import TeamStatistics from 'modules/leaguesAndTeams/screens/teamStatistics/teamStatistics.component';
 
 const LeaguesAndTeamsStack = createStackNavigator<LeaguesAndTeamsParamList>();
 
@@ -39,16 +40,25 @@ const LeaguesAndTeamsNavigator = () => {
       <LeaguesAndTeamsStack.Screen
         name={LeaguesAndTeamsRoutes.LeagueDetails}
         component={LeagueDetails}
-        options={screenOptions({title: '', headerShown: true})}
+        options={({route: {params}}) =>
+          screenOptions({title: params?.leagueName ?? '', headerShown: true})
+        }
       />
       <LeaguesAndTeamsStack.Screen
         name={LeaguesAndTeamsRoutes.TeamList}
         component={TeamList}
-        options={screenOptions({title: '', headerShown: true})}
+        options={({route: {params}}) =>
+          screenOptions({title: params?.leagueName ?? '', headerShown: true})
+        }
       />
       <LeaguesAndTeamsStack.Screen
         name={LeaguesAndTeamsRoutes.TeamDetails}
         component={TeamDetails}
+        options={screenOptions({title: '', headerShown: true})}
+      />
+      <LeaguesAndTeamsStack.Screen
+        name={LeaguesAndTeamsRoutes.TeamStatistics}
+        component={TeamStatistics}
         options={screenOptions({title: '', headerShown: true})}
       />
     </LeaguesAndTeamsStack.Navigator>

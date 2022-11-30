@@ -5,14 +5,27 @@ import {AxiosResponse} from 'axios';
 import {useEffect, useState} from 'react';
 import {LeagueItem} from 'shared/types/leagueItem.types';
 import {TeamItem} from 'shared/types/teamItem.types';
+import {StatisticsType} from 'shared/types/teamStatistics.types';
 
 type AxiosRequestType<T> = AxiosResponse<{response: T}>;
 type QueryStateType<R> = {data: {response: R}};
 
+type StatisticsParamsType = {
+  seasonYear: number;
+  teamId: number;
+  leagueId: number;
+};
+
+const handleError = (err: unknown) => console.log(err?.message);
+
 export const useGetLeagues = () => {
   const {data, error, isError, isLoading} = useQuery<
     AxiosRequestType<LeagueItem[]>
-  >(LeaguesAndTeamsQueryKeys.Leagues, () => LeaguesAndTeamsAPI.getLeagues());
+  >({
+    queryKey: LeaguesAndTeamsQueryKeys.Leagues,
+    queryFn: LeaguesAndTeamsAPI.getLeagues,
+    onError: handleError,
+  });
 
   return {data: data?.data.response ?? [], error, isError, isLoading};
 };
@@ -38,9 +51,11 @@ export const useGetLeagueById = (leagueId: number): LeagueItem | null => {
 export const useGetTeams = (leagueId: number, seasonYear: number) => {
   const {data, isError, error, isLoading} = useQuery<
     AxiosRequestType<TeamItem[]>
-  >([LeaguesAndTeamsQueryKeys.Teams, leagueId], () =>
-    LeaguesAndTeamsAPI.getLeagueTeams(leagueId, seasonYear),
-  );
+  >({
+    queryKey: [LeaguesAndTeamsQueryKeys.Teams, leagueId],
+    queryFn: () => LeaguesAndTeamsAPI.getLeagueTeams(leagueId, seasonYear),
+    onError: handleError,
+  });
 
   return {data: data?.data.response, error, isError, isLoading};
 };
@@ -62,7 +77,24 @@ export const useGetTeamById = (
     const selectedTeam = state?.find(teamItem => teamItem.team.id === teamId);
 
     setTeam(selectedTeam ?? null);
-  }, [queryClient, teamId]);
+  }, [leagueId, queryClient, teamId]);
 
   return team;
+};
+
+export const useGetStatistics = ({
+  seasonYear,
+  teamId,
+  leagueId,
+}: StatisticsParamsType) => {
+  const {data, isError, error, isLoading} = useQuery<
+    AxiosRequestType<StatisticsType>
+  >({
+    queryKey: LeaguesAndTeamsQueryKeys.Statistics,
+    queryFn: () =>
+      LeaguesAndTeamsAPI.getTeamStatistics({seasonYear, teamId, leagueId}),
+    onError: handleError,
+  });
+
+  return {data: data?.data.response, isError, isLoading, error};
 };
