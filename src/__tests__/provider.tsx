@@ -8,7 +8,13 @@ export const wrapper = () => {
     defaultOptions: {
       queries: {
         retry: false,
+        cacheTime: Infinity,
       },
+    },
+    logger: {
+      log: console.log,
+      warn: console.warn,
+      error: consose.error,
     },
   });
 
@@ -16,3 +22,5 @@ export const wrapper = () => {
     <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   );
 };
+
+test.skip('skip', () => {});

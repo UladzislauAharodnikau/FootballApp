@@ -5,6 +5,9 @@ import {LeaguesAndTeamsParamList} from 'modules/leaguesAndTeams/leaguesAndTeams.
 import {LeaguesAndTeamsRoutes} from '@constants/routes.types';
 import {useGetTeams} from 'shared/core/hooks/leaguesAndTeams';
 import {TeamCardList} from 'modules/leaguesAndTeams/screens/teamList/components/teamCardList/teamCardList.component';
+import {ActivityIndicator} from 'react-native';
+import {Theme} from '@constants/theme';
+import {testProps} from 'shared/utils/testProps';
 
 const TeamList = () => {
   const {params} =
@@ -12,15 +15,23 @@ const TeamList = () => {
       RouteProp<LeaguesAndTeamsParamList, LeaguesAndTeamsRoutes.TeamList>
     >();
 
-  const {data} = useGetTeams(params.leagueId, params.seasonYear);
+  const {data, isLoading} = useGetTeams(params.leagueId, params.seasonYear);
 
   return (
     <SafeAreaContainer>
-      <TeamCardList
-        data={data ?? []}
-        leagueId={params?.leagueId}
-        seasonYear={params?.seasonYear}
-      />
+      {isLoading ? (
+        <ActivityIndicator
+          {...testProps('activity-indicator')}
+          size={20}
+          color={Theme.purple}
+        />
+      ) : (
+        <TeamCardList
+          data={data ?? []}
+          leagueId={params?.leagueId}
+          seasonYear={params?.seasonYear}
+        />
+      )}
     </SafeAreaContainer>
   );
 };

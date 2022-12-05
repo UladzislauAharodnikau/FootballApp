@@ -1,0 +1,809 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`leagueList component test should be ActivityIndicator render when isLoading in true state, create snapshot 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#fff",
+        "flex": 1,
+        "paddingHorizontal": 15,
+      },
+      {
+        "paddingHorizontal": 0,
+        "paddingTop": 10,
+      },
+    ]
+  }
+>
+  <ActivityIndicator
+    accessibilityLabel="activity-indicator"
+    accessible={true}
+    color="#673ab7"
+    size={20}
+    testID="activity-indicator"
+  />
+</View>
+`;
+
+exports[`leagueList component test snapshot when list has items 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#fff",
+        "flex": 1,
+        "paddingHorizontal": 15,
+      },
+      {
+        "paddingHorizontal": 0,
+        "paddingTop": 10,
+      },
+    ]
+  }
+>
+  <RCTScrollView
+    ItemSeparatorComponent={[Function]}
+    accessibilityLabel="leagues-list-id"
+    accessible={true}
+    data={
+      [
+        {
+          "country": {
+            "code": "34",
+            "flag": "",
+            "name": "Test Country",
+          },
+          "league": {
+            "id": 1,
+            "logo": "",
+            "name": "Test 1",
+            "type": "League",
+          },
+          "seasons": [
+            {
+              "current": false,
+              "end": Date { NaN },
+              "start": Date { NaN },
+              "year": 2020,
+            },
+          ],
+        },
+        {
+          "country": {
+            "code": "35",
+            "flag": "",
+            "name": "Test Country 2",
+          },
+          "league": {
+            "id": 2,
+            "logo": "",
+            "name": "Test 2",
+            "type": "League",
+          },
+          "seasons": [
+            {
+              "current": false,
+              "end": Date { NaN },
+              "start": Date { NaN },
+              "year": 2022,
+            },
+          ],
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={[]}
+    testID="leagues-list-id"
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessibilityLabel="card-league-press-id"
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "flex-start",
+              "opacity": 1,
+              "paddingHorizontal": 10,
+              "paddingVertical": 5,
+            }
+          }
+          testID="card-league-press-id"
+        >
+          <Image
+            resizeMode="contain"
+            source={
+              {
+                "uri": "",
+              }
+            }
+            style={
+              {
+                "height": 65,
+                "marginRight": 20,
+                "width": 45,
+              }
+            }
+          />
+          <Text>
+            Test 1
+          </Text>
+        </View>
+        <View
+          style={
+            {
+              "backgroundColor": "#808080",
+              "height": 1,
+              "opacity": 0.5,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessibilityLabel="card-league-press-id"
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onClick={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "justifyContent": "flex-start",
+              "opacity": 1,
+              "paddingHorizontal": 10,
+              "paddingVertical": 5,
+            }
+          }
+          testID="card-league-press-id"
+        >
+          <Image
+            resizeMode="contain"
+            source={
+              {
+                "uri": "",
+              }
+            }
+            style={
+              {
+                "height": 65,
+                "marginRight": 20,
+                "width": 45,
+              }
+            }
+          />
+          <Text>
+            Test 2
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</View>
+`;
+
+exports[`leagueList component test snapshot when list is empty 1`] = `
+<View
+  style={
+    [
+      {
+        "backgroundColor": "#fff",
+        "flex": 1,
+        "paddingHorizontal": 15,
+      },
+      {
+        "paddingHorizontal": 0,
+        "paddingTop": 10,
+      },
+    ]
+  }
+>
+  <RCTScrollView
+    ItemSeparatorComponent={[Function]}
+    accessibilityLabel="leagues-list-id"
+    accessible={true}
+    data={[]}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={[]}
+    testID="leagues-list-id"
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View />
+  </RCTScrollView>
+</View>
+`;
+
+exports[`season list test season list snapshot with data 1`] = `
+<RCTScrollView
+  ItemSeparatorComponent={[Function]}
+  ListEmptyComponent={[Function]}
+  ListFooterComponent={[Function]}
+  accessibilityLabel="season-list-id"
+  accessible={true}
+  data={
+    [
+      {
+        "current": false,
+        "end": Date { NaN },
+        "start": Date { NaN },
+        "year": 2022,
+      },
+      {
+        "current": true,
+        "end": Date { NaN },
+        "start": Date { NaN },
+        "year": 2023,
+      },
+      {
+        "current": false,
+        "end": Date { NaN },
+        "start": Date { NaN },
+        "year": 2024,
+      },
+      {
+        "current": false,
+        "end": Date { NaN },
+        "start": Date { NaN },
+        "year": 2025,
+      },
+    ]
+  }
+  getItem={[Function]}
+  getItemCount={[Function]}
+  keyExtractor={[Function]}
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  onMomentumScrollBegin={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={[]}
+  testID="season-list-id"
+  viewabilityConfigCallbackPairs={[]}
+>
+  <View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessibilityLabel="season-card-press-id"
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "paddingHorizontal": 10,
+            "paddingVertical": 5,
+          }
+        }
+        testID="season-card-press-id"
+      >
+        <Text>
+          2022
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "backgroundColor": "#808080",
+            "height": 1,
+            "opacity": 0.5,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessibilityLabel="season-card-press-id"
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "paddingHorizontal": 10,
+            "paddingVertical": 5,
+          }
+        }
+        testID="season-card-press-id"
+      >
+        <Text>
+          2023
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "backgroundColor": "#808080",
+            "height": 1,
+            "opacity": 0.5,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessibilityLabel="season-card-press-id"
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "paddingHorizontal": 10,
+            "paddingVertical": 5,
+          }
+        }
+        testID="season-card-press-id"
+      >
+        <Text>
+          2024
+        </Text>
+      </View>
+      <View
+        style={
+          {
+            "backgroundColor": "#808080",
+            "height": 1,
+            "opacity": 0.5,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+    <View
+      onLayout={[Function]}
+      style={null}
+    >
+      <View
+        accessibilityLabel="season-card-press-id"
+        accessible={true}
+        collapsable={false}
+        focusable={true}
+        onBlur={[Function]}
+        onClick={[Function]}
+        onFocus={[Function]}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          {
+            "paddingHorizontal": 10,
+            "paddingVertical": 5,
+          }
+        }
+        testID="season-card-press-id"
+      >
+        <Text>
+          2025
+        </Text>
+      </View>
+    </View>
+    <View
+      onLayout={[Function]}
+    >
+      <View
+        style={
+          {
+            "backgroundColor": "#808080",
+            "height": 1,
+            "opacity": 0.5,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`season list test season list snapshot with empty data 1`] = `
+<RCTScrollView
+  ItemSeparatorComponent={[Function]}
+  ListEmptyComponent={[Function]}
+  ListFooterComponent={[Function]}
+  accessibilityLabel="season-list-id"
+  accessible={true}
+  data={[]}
+  getItem={[Function]}
+  getItemCount={[Function]}
+  keyExtractor={[Function]}
+  onContentSizeChange={[Function]}
+  onLayout={[Function]}
+  onMomentumScrollBegin={[Function]}
+  onMomentumScrollEnd={[Function]}
+  onScroll={[Function]}
+  onScrollBeginDrag={[Function]}
+  onScrollEndDrag={[Function]}
+  removeClippedSubviews={false}
+  renderItem={[Function]}
+  scrollEventThrottle={50}
+  stickyHeaderIndices={[]}
+  testID="season-list-id"
+  viewabilityConfigCallbackPairs={[]}
+>
+  <View>
+    <View>
+      <Text>
+        List is empty
+      </Text>
+    </View>
+    <View
+      onLayout={[Function]}
+    >
+      <View
+        style={
+          {
+            "backgroundColor": "#808080",
+            "height": 1,
+            "opacity": 0.5,
+            "width": "100%",
+          }
+        }
+      />
+    </View>
+  </View>
+</RCTScrollView>
+`;
+
+exports[`team list team list snapshot when data is empty 1`] = `
+<RNCSafeAreaView
+  edges={
+    [
+      "right",
+      "left",
+      "top",
+    ]
+  }
+  style={
+    {
+      "backgroundColor": "#fff",
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    ItemSeparatorComponent={[Function]}
+    ListEmptyComponent={[Function]}
+    accessibilityLabel="team-list-id"
+    accessible={true}
+    data={[]}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={[]}
+    testID="team-list-id"
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View>
+        <Text>
+          List of teams is empty
+        </Text>
+      </View>
+    </View>
+  </RCTScrollView>
+</RNCSafeAreaView>
+`;
+
+exports[`team list team list snapshot when isLoading state in true 1`] = `
+<RNCSafeAreaView
+  edges={
+    [
+      "right",
+      "left",
+      "top",
+    ]
+  }
+  style={
+    {
+      "backgroundColor": "#fff",
+      "flex": 1,
+    }
+  }
+>
+  <ActivityIndicator
+    accessibilityLabel="activity-indicator"
+    accessible={true}
+    color="#673ab7"
+    size={20}
+    testID="activity-indicator"
+  />
+</RNCSafeAreaView>
+`;
+
+exports[`team list team list snapshot with data 1`] = `
+<RNCSafeAreaView
+  edges={
+    [
+      "right",
+      "left",
+      "top",
+    ]
+  }
+  style={
+    {
+      "backgroundColor": "#fff",
+      "flex": 1,
+    }
+  }
+>
+  <RCTScrollView
+    ItemSeparatorComponent={[Function]}
+    ListEmptyComponent={[Function]}
+    accessibilityLabel="team-list-id"
+    accessible={true}
+    data={
+      [
+        {
+          "team": {
+            "code": "22",
+            "country": "England",
+            "founded": 1900,
+            "id": 1,
+            "logo": "",
+            "name": "Liverpool",
+            "national": false,
+          },
+          "venue": {
+            "address": "Test address 1",
+            "capacity": 44,
+            "city": "Test city",
+            "id": 1,
+            "image": "",
+            "name": "Venue Test 1",
+            "surface": "Test surface",
+          },
+        },
+        {
+          "team": {
+            "code": "22",
+            "country": "England",
+            "founded": 1900,
+            "id": 2,
+            "logo": "",
+            "name": "Arsenal",
+            "national": false,
+          },
+          "venue": {
+            "address": "Test address 2",
+            "capacity": 43,
+            "city": "Test city",
+            "id": 2,
+            "image": "",
+            "name": "Venue Test 2",
+            "surface": "Test surface",
+          },
+        },
+      ]
+    }
+    getItem={[Function]}
+    getItemCount={[Function]}
+    keyExtractor={[Function]}
+    onContentSizeChange={[Function]}
+    onLayout={[Function]}
+    onMomentumScrollBegin={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    removeClippedSubviews={false}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={[]}
+    testID="team-list-id"
+    viewabilityConfigCallbackPairs={[]}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessibilityLabel="team-card-press-id"
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingHorizontal": 10,
+              "paddingVertical": 5,
+            }
+          }
+          testID="team-card-press-id"
+        >
+          <Image
+            resizeMode="contain"
+            source={
+              {
+                "uri": "",
+              }
+            }
+            style={
+              {
+                "height": 60,
+                "marginRight": 20,
+                "width": 40,
+              }
+            }
+          />
+          <Text>
+            Liverpool
+          </Text>
+        </View>
+        <View
+          style={
+            {
+              "backgroundColor": "#808080",
+              "height": 1,
+              "opacity": 0.5,
+              "width": "100%",
+            }
+          }
+        />
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <View
+          accessibilityLabel="team-card-press-id"
+          accessible={true}
+          collapsable={false}
+          focusable={true}
+          onBlur={[Function]}
+          onClick={[Function]}
+          onFocus={[Function]}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "paddingHorizontal": 10,
+              "paddingVertical": 5,
+            }
+          }
+          testID="team-card-press-id"
+        >
+          <Image
+            resizeMode="contain"
+            source={
+              {
+                "uri": "",
+              }
+            }
+            style={
+              {
+                "height": 60,
+                "marginRight": 20,
+                "width": 40,
+              }
+            }
+          />
+          <Text>
+            Arsenal
+          </Text>
+        </View>
+      </View>
+    </View>
+  </RCTScrollView>
+</RNCSafeAreaView>
+`;

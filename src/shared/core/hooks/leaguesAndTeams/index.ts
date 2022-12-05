@@ -19,7 +19,7 @@ type StatisticsParamsType = {
 const handleError = (err: unknown) => console.log(err?.message);
 
 export const useGetLeagues = () => {
-  const {data, error, isError, isLoading} = useQuery<
+  const {data, error, isError, isLoading, isSuccess} = useQuery<
     AxiosRequestType<LeagueItem[]>
   >({
     queryKey: LeaguesAndTeamsQueryKeys.Leagues,
@@ -27,7 +27,13 @@ export const useGetLeagues = () => {
     onError: handleError,
   });
 
-  return {data: data?.data.response ?? [], error, isError, isLoading};
+  return {
+    data: data?.data.response ?? [],
+    error,
+    isError,
+    isLoading,
+    isSuccess,
+  };
 };
 
 export const useGetLeagueById = (leagueId: number): LeagueItem | null => {

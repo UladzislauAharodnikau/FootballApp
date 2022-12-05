@@ -7,6 +7,7 @@ import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {LeaguesAndTeamsParamList} from 'modules/leaguesAndTeams/leaguesAndTeams.types';
 import {LeaguesAndTeamsRoutes} from '@constants/routes.types';
+import {testProps} from 'shared/utils/testProps';
 
 type TeamDetailsStackProp = StackNavigationProp<
   LeaguesAndTeamsParamList,
@@ -36,6 +37,7 @@ export const TeamCardList: React.FC<TeamCardListProps> = memo(
 
     return (
       <FlatList
+        {...testProps('team-list-id')}
         data={data}
         renderItem={renderItem}
         ItemSeparatorComponent={() => <Divider opacity={0.5} />}

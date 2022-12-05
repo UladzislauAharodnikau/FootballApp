@@ -1,6 +1,7 @@
 import React, {memo} from 'react';
 import {TeamType} from 'shared/types/teamItem.types';
-import {Image, Pressable, StyleSheet, Text, View} from 'react-native';
+import {Image, Pressable, StyleSheet, Text} from 'react-native';
+import {testProps} from 'shared/utils/testProps';
 
 interface TeamCardProps {
   team: TeamType;
@@ -10,7 +11,10 @@ interface TeamCardProps {
 export const TeamCard: React.FC<TeamCardProps> = memo(
   ({team, onTeamCardPress}) => {
     return (
-      <Pressable style={styles.container} onPress={onTeamCardPress}>
+      <Pressable
+        {...testProps('team-card-press-id')}
+        style={styles.container}
+        onPress={onTeamCardPress}>
         <Image
           source={{uri: team.logo}}
           style={styles.logo}

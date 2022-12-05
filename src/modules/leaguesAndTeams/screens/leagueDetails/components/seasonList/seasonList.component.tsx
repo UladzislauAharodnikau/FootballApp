@@ -7,6 +7,7 @@ import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {LeaguesAndTeamsParamList} from 'modules/leaguesAndTeams/leaguesAndTeams.types';
 import {LeaguesAndTeamsRoutes} from '@constants/routes.types';
+import {testProps} from 'shared/utils/testProps';
 
 type TeamListStackProp = StackNavigationProp<
   LeaguesAndTeamsParamList,
@@ -36,6 +37,7 @@ export const SeasonList: React.FC<SeasonListProps> = memo(
 
     return (
       <FlatList
+        {...testProps('season-list-id')}
         data={data}
         keyExtractor={({year}) => year.toString()}
         renderItem={renderItem}

@@ -1,6 +1,7 @@
 import React, {memo} from 'react';
 import {Image, StyleSheet, Text, TouchableOpacity} from 'react-native';
 import {LeagueItem} from 'shared/types/leagueItem.types';
+import {testProps} from 'shared/utils/testProps';
 
 interface LeagueCardProps {
   league: LeagueItem;
@@ -15,15 +16,16 @@ export const LeagueCard: React.FC<LeagueCardProps> = memo(
 
     return (
       <TouchableOpacity
+        {...testProps('card-league-press-id')}
         style={styles.container}
         onPress={onPress}
         activeOpacity={0.85}>
         <Image
-          source={{uri: league.logo}}
+          source={{uri: league?.logo}}
           resizeMode="contain"
           style={styles.flagContainer}
         />
-        <Text>{league.name}</Text>
+        <Text>{league?.name}</Text>
       </TouchableOpacity>
     );
   },
