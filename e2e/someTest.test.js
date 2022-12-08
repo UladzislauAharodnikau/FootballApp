@@ -1,7 +1,8 @@
+import {device} from 'detox';
+
 describe('Example', () => {
   beforeAll(async () => {
-    // eslint-disable-next-line no-undef
-    // await device.launchApp();
+    await device.launchApp();
   });
 
   beforeEach(async () => {});
