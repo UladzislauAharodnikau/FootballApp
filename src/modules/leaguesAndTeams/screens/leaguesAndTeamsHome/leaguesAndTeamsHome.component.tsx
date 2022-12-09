@@ -8,6 +8,7 @@ import {useNavigation} from '@react-navigation/native';
 import {LeaguesAndTeamsRoutes} from '@constants/routes.types';
 import {NativeStackNavigationProp} from 'react-native-screens/native-stack';
 import {LeaguesAndTeamsParamList} from 'modules/leaguesAndTeams/leaguesAndTeams.types';
+import {testProps} from 'shared/utils/testProps';
 
 type LeaguesDetailsScreenNavigationProp = NativeStackNavigationProp<
   LeaguesAndTeamsParamList,
@@ -27,7 +28,9 @@ const LeaguesAndTeamsHome = () => {
   return (
     <SafeAreaContainer>
       <ScreenContainer style={styles.screenContainer}>
-        <View style={styles.cardsContainer}>
+        <View
+          style={styles.cardsContainer}
+          {...testProps('cards-leagues-list-id')}>
           <CardList data={cardsData} onPress={onCardPress} />
         </View>
       </ScreenContainer>

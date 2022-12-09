@@ -10,7 +10,7 @@ interface CardListProps {
 
 export const CardList: React.FC<CardListProps> = memo(({data, onPress}) => {
   const renderItem = ({item}: ListRenderItemInfo<CardType>) => {
-    return <Card {...item} onPress={onPress} />;
+    return <Card testID={item?.keyValue} {...item} onPress={onPress} />;
   };
 
   return (

@@ -11,6 +11,7 @@ interface CardProps {
   iconSize?: number;
   iconColor?: string;
   onPress(type: string): void;
+  testID?: string;
 }
 
 export const Card: React.FC<CardProps> = memo(
@@ -20,6 +21,7 @@ export const Card: React.FC<CardProps> = memo(
     iconName,
     iconSize = 20,
     iconColor = Theme.dark,
+    testID,
     onPress,
   }) => {
     const onCardPress = () => {
@@ -28,6 +30,7 @@ export const Card: React.FC<CardProps> = memo(
 
     return (
       <TouchableOpacity
+        testID={testID}
         activeOpacity={0.85}
         style={styles.cardContainer}
         onPress={onCardPress}

@@ -3,7 +3,6 @@ import {tabIcons, TabNames} from '@components/tabBar/tabBar.data';
 
 export enum CardKeys {
   League = 'league',
-  Team = 'team',
 }
 
 export const cardsData: Card[] = [
