@@ -1,8 +1,8 @@
-import {device} from 'detox';
+import detox from 'detox';
 
 describe('Example', () => {
   beforeAll(async () => {
-    await device.launchApp();
+    await detox.device.launchApp();
   });
 
   beforeEach(async () => {});

@@ -22,6 +22,7 @@
     "@react-navigation/stack": "^6.3.3",
     "axios": "^0.27.2",
     "detox": "^20.0.3",
+    "jest-config": "^29.3.1",
     "react": "18.1.0",
     "react-native": "0.70.4",
     "react-native-asset": "^2.0.1",
