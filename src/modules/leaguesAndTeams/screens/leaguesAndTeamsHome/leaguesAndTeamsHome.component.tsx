@@ -5,7 +5,7 @@ import {CardList} from '@components/cardList';
 import {cardsData, CardKeys} from './leaguesAndTeamsHome.data';
 import {StyleSheet, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
-import {LeaguesAndTeamsRoutes} from '@constants/routes.types';
+import {LeaguesAndTeamsRoutes} from 'shared/types/routes.types';
 import {NativeStackNavigationProp} from 'react-native-screens/native-stack';
 import {LeaguesAndTeamsParamList} from 'modules/leaguesAndTeams/leaguesAndTeams.types';
 import {testProps} from 'shared/utils/testProps';

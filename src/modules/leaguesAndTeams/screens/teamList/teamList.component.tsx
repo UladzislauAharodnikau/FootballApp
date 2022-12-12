@@ -2,7 +2,7 @@ import React from 'react';
 import {SafeAreaContainer} from '@components/safeAreaContainer';
 import {RouteProp, useRoute} from '@react-navigation/native';
 import {LeaguesAndTeamsParamList} from 'modules/leaguesAndTeams/leaguesAndTeams.types';
-import {LeaguesAndTeamsRoutes} from '@constants/routes.types';
+import {LeaguesAndTeamsRoutes} from 'shared/types/routes.types';
 import {useGetTeams} from 'shared/core/hooks/leaguesAndTeams';
 import {TeamCardList} from 'modules/leaguesAndTeams/screens/teamList/components/teamCardList/teamCardList.component';
 import {ActivityIndicator} from 'react-native';

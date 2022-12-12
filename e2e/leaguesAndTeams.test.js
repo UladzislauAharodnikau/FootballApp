@@ -1,11 +1,9 @@
 import {device, element, by} from 'detox';
 
-describe('Example', () => {
+describe('Leagues and teams tests', () => {
   beforeAll(async () => {
     await device.launchApp();
   });
-
-  beforeEach(async () => {});
 
   it('list of leagues should be first opened after init app', async () => {
     const leagueListContainerView = await element(

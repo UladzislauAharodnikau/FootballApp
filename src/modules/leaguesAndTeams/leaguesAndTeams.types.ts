@@ -1,4 +1,4 @@
-import {LeaguesAndTeamsRoutes} from '@constants/routes.types';
+import {LeaguesAndTeamsRoutes} from 'shared/types/routes.types';
 
 export type LeaguesAndTeamsParamList = {
   [LeaguesAndTeamsRoutes.LeaguesAndTeamsHome]: undefined;

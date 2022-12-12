@@ -4,8 +4,8 @@ import {ScreenContainer} from '@components/screenContainer';
 import {useGetStatistics} from 'shared/core/hooks/leaguesAndTeams';
 import {useRoute, RouteProp, useNavigation} from '@react-navigation/native';
 import {LeaguesAndTeamsParamList} from 'modules/leaguesAndTeams/leaguesAndTeams.types';
-import {LeaguesAndTeamsRoutes} from '@constants/routes.types';
-import {ActivityIndicator, Text, View} from 'react-native';
+import {LeaguesAndTeamsRoutes} from 'shared/types/routes.types';
+import {ActivityIndicator, StyleSheet, Text, View} from 'react-native';
 import {Theme} from '@constants/theme';
 
 type TeamStatisticsRouteProp = RouteProp<
@@ -45,7 +45,7 @@ export const TeamStatistics = () => {
         {isLoading ? (
           <ActivityIndicator color={Theme.purple} size={20} />
         ) : (
-          <View style={{flexDirection: 'row', justifyContent: 'space-between'}}>
+          <View style={styles.titlesContainer}>
             {titles.map(item => (
               <View key={item}>
                 <Text>{item}</Text>
@@ -57,5 +57,9 @@ export const TeamStatistics = () => {
     </SafeAreaContainer>
   );
 };
+
+const styles = StyleSheet.create({
+  titlesContainer: {flexDirection: 'row', justifyContent: 'space-between'},
+});
 
 export default TeamStatistics;

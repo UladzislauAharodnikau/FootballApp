@@ -3,7 +3,7 @@ import {SafeAreaContainer} from '@components/safeAreaContainer';
 import {ScreenContainer} from '@components/screenContainer';
 import {useRoute, RouteProp, useNavigation} from '@react-navigation/native';
 import {LeaguesAndTeamsParamList} from 'modules/leaguesAndTeams/leaguesAndTeams.types';
-import {LeaguesAndTeamsRoutes} from '@constants/routes.types';
+import {LeaguesAndTeamsRoutes} from 'shared/types/routes.types';
 import {useGetTeamById} from 'shared/core/hooks/leaguesAndTeams';
 import {TeamDetailsCard} from 'modules/leaguesAndTeams/screens/teamDetails/components/teamDetailsCard/teamDetailsCard.component';
 import {Pressable, StyleSheet, Text, View} from 'react-native';

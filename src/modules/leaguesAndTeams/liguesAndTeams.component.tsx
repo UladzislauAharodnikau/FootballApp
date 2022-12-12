@@ -3,7 +3,7 @@ import {
   createStackNavigator,
   StackNavigationOptions,
 } from '@react-navigation/stack';
-import {LeaguesAndTeamsRoutes} from '@constants/routes.types';
+import {LeaguesAndTeamsRoutes} from 'shared/types/routes.types';
 import {getStackScreenOptions} from 'shared/utils/getStackScreenOptions';
 import LeaguesAndTeamsHome from 'modules/leaguesAndTeams/screens/leaguesAndTeamsHome/leaguesAndTeamsHome.component';
 import {LeaguesAndTeamsParamList} from 'modules/leaguesAndTeams/leaguesAndTeams.types';

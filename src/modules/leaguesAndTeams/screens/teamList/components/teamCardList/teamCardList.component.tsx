@@ -6,7 +6,7 @@ import {Divider} from '@components/divider';
 import {useNavigation} from '@react-navigation/native';
 import {StackNavigationProp} from '@react-navigation/stack';
 import {LeaguesAndTeamsParamList} from 'modules/leaguesAndTeams/leaguesAndTeams.types';
-import {LeaguesAndTeamsRoutes} from '@constants/routes.types';
+import {LeaguesAndTeamsRoutes} from 'shared/types/routes.types';
 import {testProps} from 'shared/utils/testProps';
 
 type TeamDetailsStackProp = StackNavigationProp<

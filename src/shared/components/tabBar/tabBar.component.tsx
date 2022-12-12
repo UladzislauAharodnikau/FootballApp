@@ -5,6 +5,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import {Icon} from '@components/icon';
 import {tabIcons, tabLabels} from './tabBar.data';
 import {Theme} from '@constants/theme';
+import {testProps} from 'shared/utils/testProps';
 
 export const TabBar: React.FC<BottomTabBarProps> = ({state, navigation}) => {
   return (
@@ -31,7 +32,8 @@ export const TabBar: React.FC<BottomTabBarProps> = ({state, navigation}) => {
             style={styles.item}
             activeOpacity={0.85}
             onPress={onPress}
-            key={route.key}>
+            key={route.key}
+            {...testProps(route.name)}>
             <Icon
               name={tabIcons[route.name]}
               style={styles.tabIcon}

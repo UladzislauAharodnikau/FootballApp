@@ -1,7 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
 import {CoachesAndPlayersParamList} from './coachesAndPlayers.types';
-import {CoachesAndPlayersRoutes} from '@constants/routes.types';
+import {CoachesAndPlayersRoutes} from 'shared/types/routes.types';
 import {CoachAndPlayersHome} from './screens/coachAndPlayersHome/coachAndPlayersHome.component';
 import {getStackScreenOptions} from 'shared/utils/getStackScreenOptions';
 

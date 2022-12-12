@@ -7,6 +7,9 @@ import CoachesAndPlayersModule from 'modules/coachesAndPlayers/coachesAndPlayers
 import {TabBar} from '@components/tabBar';
 import {QueryClientProvider, QueryClient} from 'react-query';
 import LeaguesAndTeamsModule from 'modules/leaguesAndTeams/liguesAndTeams.component';
+import WishListModule from 'modules/wishList/wishList.component';
+import TransfersModule from 'modules/transfers/transfers.component';
+import ProfileModule from 'modules/profile/profile.component';
 
 const client = new QueryClient({
   defaultOptions: {
@@ -17,9 +20,9 @@ const client = new QueryClient({
 const tabs = [
   {name: TabRoutes.LiguesAndTeams, component: LeaguesAndTeamsModule},
   {name: TabRoutes.CoachesAndPlayers, component: CoachesAndPlayersModule},
-  {name: TabRoutes.WishList, component: CoachesAndPlayersModule},
-  {name: TabRoutes.Transfers, component: CoachesAndPlayersModule},
-  {name: TabRoutes.Profile, component: CoachesAndPlayersModule},
+  {name: TabRoutes.WishList, component: WishListModule},
+  {name: TabRoutes.Transfers, component: TransfersModule},
+  {name: TabRoutes.Profile, component: ProfileModule},
 ];
 
 const Tab = createBottomTabNavigator();
