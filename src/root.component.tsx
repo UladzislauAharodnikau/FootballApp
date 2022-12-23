@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {TabRoutes} from 'root.types';
@@ -10,6 +10,11 @@ import LeaguesAndTeamsModule from 'modules/leaguesAndTeams/liguesAndTeams.compon
 import WishListModule from 'modules/wishList/wishList.component';
 import TransfersModule from 'modules/transfers/transfers.component';
 import ProfileModule from 'modules/profile/profile.component';
+import Notifications from 'modules/forNativeModule/notifications.component';
+
+import RNShake from 'react-native-shake';
+import {IS_ANDROID} from '@constants/common';
+import {Alert} from 'react-native';
 
 const client = new QueryClient({
   defaultOptions: {
@@ -40,11 +45,28 @@ const TabsNavigator = () => {
 };
 
 export const Root = () => {
+  const [toggleScreen, setToggleScreen] = useState<boolean>(false);
+
+  useEffect(() => {
+    const subscription = RNShake.addListener(() => {
+      if (IS_ANDROID) {
+        setToggleScreen(prev => !prev);
+      } else {
+        Alert.alert(
+          'Denied',
+          'can get access to the screen. Available only for android platform at this moment',
+        );
+      }
+    });
+
+    return () => subscription.remove();
+  }, []);
+
   return (
     <SafeAreaProvider>
       <QueryClientProvider client={client}>
         <NavigationContainer>
-          <TabsNavigator />
+          {toggleScreen ? <Notifications /> : <TabsNavigator />}
         </NavigationContainer>
       </QueryClientProvider>
     </SafeAreaProvider>
